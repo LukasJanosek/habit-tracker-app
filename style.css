@@ -16,10 +16,83 @@ body {
   margin: 0 auto;
 }
 
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
 h1 {
   font-size: 1.8rem;
   font-weight: normal;
-  margin-bottom: 24px;
+}
+
+#dark-toggle {
+  padding: 6px 14px;
+  font-size: 0.85rem;
+  color: blue;
+  background: white;
+  border: 1px solid blue;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#dark-toggle:hover {
+  background: #eeeeff;
+}
+
+body.dark {
+  background: #1a1a2e;
+  color: #7799ff;
+}
+
+body.dark #habit-input {
+  background: #16213e;
+  color: #7799ff;
+  border-color: #7799ff;
+}
+
+body.dark #habit-input::placeholder {
+  color: #445588;
+}
+
+body.dark #add-btn {
+  background: #7799ff;
+  color: #1a1a2e;
+}
+
+body.dark #add-btn:hover {
+  background: #99aaff;
+}
+
+body.dark #habit-list li {
+  background: #16213e;
+  border-color: #334477;
+}
+
+body.dark .habit-name {
+  color: #7799ff;
+}
+
+body.dark .remove-btn {
+  background: #16213e;
+  color: #7799ff;
+  border-color: #7799ff;
+}
+
+body.dark .remove-btn:hover {
+  background: #1e2a50;
+}
+
+body.dark #dark-toggle {
+  background: #16213e;
+  color: #7799ff;
+  border-color: #7799ff;
+}
+
+body.dark #dark-toggle:hover {
+  background: #1e2a50;
 }
 
 #add-habit {

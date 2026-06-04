@@ -49,9 +49,24 @@ function renderHabits(habits) {
   });
 }
 
+function initDarkMode() {
+  const toggle = document.getElementById('dark-toggle');
+  const isDark = localStorage.getItem('dark-mode') === 'true';
+  if (isDark) {
+    document.body.classList.add('dark');
+    toggle.textContent = 'Light Mode';
+  }
+  toggle.addEventListener('click', () => {
+    const dark = document.body.classList.toggle('dark');
+    localStorage.setItem('dark-mode', dark);
+    toggle.textContent = dark ? 'Light Mode' : 'Dark Mode';
+  });
+}
+
 function init() {
   const habits = loadHabits();
   renderHabits(habits);
+  initDarkMode();
 
   const input = document.getElementById('habit-input');
   const addBtn = document.getElementById('add-btn');
