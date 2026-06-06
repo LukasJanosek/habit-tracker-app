@@ -4,6 +4,11 @@
   padding: 0;
 }
 
+button {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
 body {
   font-family: sans-serif;
   color: blue;
