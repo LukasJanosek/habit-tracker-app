@@ -85,6 +85,14 @@ function init() {
   input.addEventListener('keydown', (e) => {
     if (e.key === 'Enter') addHabit();
   });
+
+  document.getElementById('clear-completed-btn').addEventListener('click', () => {
+    const remaining = habits.filter(h => !h.done);
+    habits.length = 0;
+    habits.push(...remaining);
+    saveHabits(habits);
+    renderHabits(habits);
+  });
 }
 
 init();

@@ -95,6 +95,31 @@ body.dark #dark-toggle:hover {
   background: #1e2a50;
 }
 
+#clear-completed-btn {
+  margin-top: 12px;
+  padding: 6px 14px;
+  font-size: 0.85rem;
+  color: blue;
+  background: white;
+  border: 1px solid blue;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#clear-completed-btn:hover {
+  background: #eeeeff;
+}
+
+body.dark #clear-completed-btn {
+  background: #16213e;
+  color: #7799ff;
+  border-color: #7799ff;
+}
+
+body.dark #clear-completed-btn:hover {
+  background: #1e2a50;
+}
+
 #add-habit {
   display: flex;
   gap: 8px;
